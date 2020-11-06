@@ -471,6 +471,16 @@ robot = RobotRescate()
 
 posInicial=None
 tiempoInicialUltimaSalida=None
+def girar90IPuro():
+    robot.girar(-20)
+    robot.esperar(1.07)
+
+def avanzarDistancia(dist):
+    posInicial=robot.getGps()
+    robot.setVel(30)
+    while (distancia(posInicial, robot.getGps())>dist )):
+        robot.esperar(0.1)
+    robot.parar()
 
 def girar90I():
     #print("girar90I")
