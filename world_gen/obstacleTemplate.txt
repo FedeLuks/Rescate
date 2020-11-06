@@ -1,0 +1,21 @@
+		DEF OBSTACLE{0} Solid {{
+            translation {4} {5} {6}
+			rotation 0 1 0 {7}
+            children [
+                Shape {{
+                    appearance Appearance {{
+						material Material {{
+						diffuseColor 0.45 0.45 0.45
+						}}
+                    }}
+                    geometry DEF OBSTACLEBOX{0} Box {{
+						size {1} {2} {3}
+                    }}
+                }}
+            ]
+            name "obstacle{0}"
+            boundingObject USE OBSTACLEBOX{0}
+	    recognitionColors [
+			0.45 0.45 0.45
+		]
+        }}
